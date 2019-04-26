@@ -13,7 +13,7 @@ public class HelloController extends Controller {
         renderText("Hello, JFinal!");
     }
 
-    public void myTest() {
+    public void myText() {
         System.out.println("text");
        renderText("This is my Text!");
     }
