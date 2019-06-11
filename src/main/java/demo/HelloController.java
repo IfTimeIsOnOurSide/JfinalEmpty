@@ -3,7 +3,7 @@ package demo;
 import com.jfinal.core.Controller;
 
 /**
- * @Description:
+ * @Description:  JFinal 框架学习
  * @author: daimin
  * @date: Create in 11:01 2019/4/26
  */
@@ -14,7 +14,6 @@ public class HelloController extends Controller {
     }
 
     public void myText() {
-        System.out.println("text");
        renderText("This is my Text!");
     }
 }
