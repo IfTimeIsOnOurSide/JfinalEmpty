@@ -20,8 +20,6 @@ public class DemoConfig extends JFinalConfig {
     }
     @Override
     public void configRoute(Routes me) {
-        me.setMappingSuperClass(false);
-        me.setBaseViewPath("/view");
         me.add("/hello", HelloController.class);
     }
 
