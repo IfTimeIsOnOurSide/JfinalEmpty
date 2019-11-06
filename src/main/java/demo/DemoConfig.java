@@ -11,7 +11,7 @@ import com.jfinal.template.Engine;
  */
 public class DemoConfig extends JFinalConfig {
     public static void main(String[] args) {
-        UndertowServer.start(DemoConfig.class, 80, true);
+        UndertowServer.start(DemoConfig.class, 8080, true);
     }
 
     @Override
