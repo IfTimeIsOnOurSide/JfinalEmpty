@@ -15,6 +15,8 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 import java.util.function.Predicate;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 /**
  * @Description:  JFinal 框架学习
@@ -49,6 +51,20 @@ public class HelloController extends Controller {
      * Stream学习
      */
     public void streamTest() {
+        //生成Stream  of(长度固定)/generate(随机数和常量)
+        Stream<String> strStream = Stream.of("我知道你在与我相遇的路上");
+        Stream<String> str0Stream = Stream.of("王荻", "王荻");
+        Stream.concat(strStream, str0Stream).distinct().forEach(System.out::println);
+//        Stream.of("a", "b", "c").map(item -> item.toUpperCase()).forEach(System.out::println);
+//        Stream.of(1, 2, 3).flatMap(item -> Stream.of(item * 10)).forEach(System.out::println);
+
+        List<Integer> list = Stream.of(1, 3, 2).peek(i -> System.out.print("peekCallFirst:" + i + "\n")).sorted().skip(1).collect(Collectors.toList());
+
+        System.out.println(Stream.of(1, 2, 3).reduce(Integer::sum).get());
+        System.out.println(Stream.of(10, 20, 30).reduce(2, (a, b) -> a + b));
+
+//        Stream.generate(Math::random).limit(10).forEach(System.out::println);
+//        Stream.iterate(1, i -> i+1).limit(10).filter(j -> j >= 6).forEach(System.out::println);
         renderText("Stream学习");
     }
 
