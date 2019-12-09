@@ -10,6 +10,8 @@ public class Student {
     private int age;
     private String gander;
 
+    public Student() {}
+
     public Student(String name, int age, String gander) {
         this.name = name;
         this.age = age;
